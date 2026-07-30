@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Expérience pédagogique animée consacrée à Marignan, 1515.">
+  <title>1515 — Marignan, le choc des géants</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="progress"></div>
+  <header class="hero" id="accueil">
+    <nav><a class="brand" href="#accueil">1515</a><button id="navToggle" aria-label="Ouvrir le menu">☰</button><div id="navLinks"><a href="#avenement">Le roi</a><a href="#contexte">Contexte</a><a href="#bataille">Déroulé</a><a href="#battle3d">Bataille 3D</a><a href="#consequences">Conséquences</a><a href="#quiz">Quiz</a><a href="#ressources">Ressources</a></div></nav>
+    <div class="hero-bg"></div><div class="grain"></div>
+    <div class="hero-content reveal"><p class="eyebrow">13–14 septembre 1515 · près de Milan</p><h1>MARIGNAN</h1><p class="lead">Deux jours de fer, de feu et de diplomatie qui forgent la légende de François Ier.</p><a class="cta" href="#avenement">Entrer dans l’Histoire ↓</a></div>
+    <div class="scroll-hint">DÉFILER <span></span></div>
+  </header>
+
+  <main>
+    <section id="avenement" class="king section-dark">
+      <div class="section-copy reveal royal-trigger"><p class="eyebrow">Acte I · L’avènement</p><h2>Un jeune roi<br><em>en quête de gloire</em></h2><p>François d’Angoulême succède à Louis XII le 1<sup>er</sup> janvier 1515. Âgé de vingt ans, formé aux armes et nourri de culture chevaleresque, il veut affirmer immédiatement sa légitimité par une victoire éclatante.</p><p>Par son arrière-grand-mère Valentine Visconti, la monarchie française revendique le duché de Milan. Le nouveau souverain rassemble une armée moderne : cavalerie lourde, fantassins français, mercenaires lansquenets et une artillerie mobile particulièrement puissante.</p><div class="facts"><div><strong>20</strong><span>ans à son avènement</span></div><div><strong>1515</strong><span>une année devenue mythique</span></div></div><button class="music-btn" id="musicBtn">♫ Armer le thème royal</button><p class="fine">Cliquez une fois : le thème se déclenchera ensuite près du roi, à 10 %, avec fade in/out et arrivée du drop.</p></div>
+      <div class="king-portrait reveal royal-trigger" data-royal="portrait"><div class="halo"></div><img src="assets/DemoLaminak_francois-ier-swag.png" alt="François Ier en majesté"><span>FRANÇOIS I<sup>ER</sup></span><div class="royal-aura">LE ROI ENTRE DANS LE RÉCIT</div></div>
+    </section>
+
+    <section id="contexte" class="context">
+      <div class="section-title reveal"><p class="eyebrow">Acte II · L’échiquier italien</p><h2>Pourquoi se battre<br>pour <em>Milan ?</em></h2></div>
+      <div class="context-grid"><figure class="map-card reveal"><img src="assets/DemoLaminak_carte-italie-1515.png" alt="Carte des guerres d’Italie vers 1515"><figcaption>Une péninsule riche, morcelée et convoitée.</figcaption></figure><div class="stakes reveal"><article><b>01</b><h3>Une revendication dynastique</h3><p>Les rois de France revendiquent le Milanais par l’héritage de Valentine Visconti.</p></article><article><b>02</b><h3>Un verrou stratégique</h3><p>Milan commande les routes du nord de l’Italie et constitue une puissance économique majeure.</p></article><article><b>03</b><h3>Un jeu d’alliances</h3><p>Face aux Suisses qui défendent le duc Maximilien Sforza, la France s’allie notamment à Venise.</p></article></div></div>
+    </section>
+
+    <section id="bataille" class="battle section-dark">
+      <div class="section-title reveal"><p class="eyebrow">Acte III · 13–14 septembre</p><h2>La bataille<br><em>heure par heure</em></h2><p>Utilisez la frise ou le bouton Lecture pour suivre le déroulé.</p></div>
+      <div class="battle-stage reveal"><img id="battleImage" src="assets/DemoLaminak_bataille-marignan.png" alt="Reconstitution de la bataille de Marignan"><div class="vignette"></div><div id="units"><span class="unit french">⚜</span><span class="unit swiss">✚</span><span class="unit cannon">●</span></div><div class="battle-caption"><span id="phaseTime">13 sept. · après-midi</span><h3 id="phaseTitle">Le choc initial</h3><p id="phaseText">Les colonnes suisses attaquent brusquement. L’artillerie française et les lansquenets tentent de briser leur élan.</p></div></div>
+      <div class="timeline"><button id="playBattle">▶ Lecture</button><input id="phaseSlider" type="range" min="0" max="3" value="0" step="1" aria-label="Phase de la bataille"><div class="ticks"><span>Attaque</span><span>Nuit</span><span>Renforts</span><span>Victoire</span></div></div>
+      <div class="legend"><span><i class="blue"></i>Français</span><span><i class="red"></i>Suisses</span><span><i class="gold"></i>Artillerie / Vénitiens</span></div>
+    </section>
+
+    <section id="battle3d" class="battle3d-section">
+      <div class="section-title reveal"><p class="eyebrow">Interlude jouable · Le champ de bataille</p><h2>Entrez dans<br><em>la mêlée en 3D</em></h2><p>Une reconstitution stylisée pour comprendre l’espace, les charges suisses, le rôle de l’artillerie et l’arrivée vénitienne. Ce n’est pas une simulation exacte des effectifs.</p></div>
+      <div class="game-shell reveal" id="gameShell">
+        <canvas id="battleCanvas" aria-label="Reconstitution interactive en trois dimensions de la bataille"></canvas>
+        <div class="game-hud"><div><small>13–14 SEPTEMBRE 1515</small><strong id="gameObjective">TENIR LA LIGNE</strong></div><div class="hud-score" title="Reconstitution ludique fondée sur des ordres de grandeur historiques ; les estimations varient selon les sources"><small>EFFECTIFS · ÉVOLUTION SIMULÉE</small><span class="fr-score">⚜ France <b id="frenchCount">30 000</b><i id="frenchLoss">0 perte</i></span><span class="sw-score">◆ Suisses <b id="swissCount">20 000</b><i id="swissLoss">0 perte</i></span><span class="ve-score waiting" id="venetianScore">☀ Vénitiens <b id="venetianCount">0</b><i id="venetianState">en approche</i></span></div></div>
+        <div class="game-message" id="gameMessage"><b>MARIGNAN · MODE BATAILLE</b><span>Déplacez la caméra et lancez la reconstitution.</span></div>
+        <div class="game-controls"><button id="start3d">▶ Lancer la bataille</button><button id="pause3d">❚❚ Pause</button><button id="reset3d">↻ Rejouer</button><button id="fullscreen3d">⛶ Plein écran</button></div>
+        <div class="game-help">ZQSD / flèches : avancer latéralement selon la vue · glisser : orienter et incliner · molette : zoom</div>
+      </div>
+      <div class="game-brief"><article><b>BLEU</b><h3>Armée royale</h3><p>Artillerie, gendarmes et lansquenets doivent absorber les assauts.</p></article><article><b>ROUGE</b><h3>Colonnes suisses</h3><p>Des piquiers compacts cherchent à rompre le dispositif français.</p></article><article><b>OR</b><h3>Renforts vénitiens</h3><p>Ils apparaissent au matin sur le flanc et contribuent au basculement.</p></article></div>
+    </section>
+
+    <section id="consequences" class="aftermath">
+      <div class="section-title reveal"><p class="eyebrow">Acte IV · Après les armes</p><h2>Une victoire aux<br><em>effets durables</em></h2></div>
+      <div class="cards"><article class="reveal royal-trigger"><span>1515</span><h3>Le Milanais conquis</h3><p>François Ier entre à Milan. Maximilien Sforza abdique en échange d’une pension : la France contrôle momentanément le duché.</p></article><article class="reveal"><span>1516</span><h3>Paix perpétuelle</h3><p>La France et les cantons suisses concluent à Fribourg une paix durable. Le recrutement de mercenaires suisses au service du roi est bientôt organisé.</p></article><article class="reveal royal-trigger"><span>1516</span><h3>Concordat de Bologne</h3><p>Après sa rencontre avec Léon X, François Ier obtient un rôle décisif dans la nomination des évêques et abbés du royaume.</p></article><article class="reveal royal-trigger"><span>MYTHE</span><h3>Le roi-chevalier</h3><p>Adoubé autour de la bataille selon une tradition célèbre, François Ier transforme Marignan en récit fondateur. Cette gloire masque toutefois une domination française fragile en Italie.</p></article></div>
+      <blockquote class="reveal">« Une victoire éclatante, mais non la fin des guerres d’Italie. »</blockquote>
+    </section>
+
+    <section id="quiz" class="quiz section-dark">
+      <div class="section-title reveal"><p class="eyebrow">À vous de jouer</p><h2>Le défi<br><em>Marignan</em></h2></div>
+      <div class="quiz-box reveal"><div id="quizProgress">Question 1 / 5</div><h3 id="question"></h3><div id="answers"></div><p id="feedback"></p><button id="nextQuestion" hidden>Question suivante →</button></div>
+    </section>
+
+    <section id="ressources" class="resources">
+      <div class="section-title reveal"><p class="eyebrow">Prolonger le cours</p><h2>Téléchargez<br><em>les ressources</em></h2><p>Présentations prêtes à projeter et documents prêts à imprimer.</p></div>
+      <div class="download-grid">
+        <a class="download-card reveal featured" href="downloads/Marignan-1515-Presentation.pptx" download><span class="filetype">PPTX</span><h3>Support de cours</h3><p>La présentation complète à utiliser en classe.</p><b>Télécharger ↓</b></a>
+        <a class="download-card reveal" href="downloads/Marignan-1515-Cours-illustre.docx" download><span class="filetype">DOCX</span><h3>Cours illustré</h3><p>Le document élève à consulter ou à imprimer.</p><b>Télécharger ↓</b></a>
+        <a class="download-card reveal" href="downloads/Marignan-1515-Cahier-activites.docx" download><span class="filetype">DOCX</span><h3>Cahier d’activités</h3><p>Des exercices variés pour vérifier les acquis.</p><b>Télécharger ↓</b></a>
+      </div>
+    </section>
+  </main>
+  <footer><strong>1515 · MARIGNAN</strong><p>Expérience pédagogique hors ligne — documents du cours disponibles dans le dossier parent.</p><a href="#accueil">Retour en haut ↑</a></footer>
+  <div id="audioToast" role="status"><span>♛</span><div><b>THÈME ROYAL</b><small>François Ier approche…</small></div><i></i></div>
+  <audio id="royalAudio" preload="auto" loop src="assets/Walen-HEADPHONK.mp3"></audio>
+  <script src="script.js"></script>
+</body>
+</html>

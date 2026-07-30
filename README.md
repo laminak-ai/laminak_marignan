@@ -4,7 +4,7 @@ Une expérience pédagogique interactive consacrée à la bataille de Marignan e
 
 Le projet mêle récit historique, illustrations, frise animée, reconstitution jouable en pseudo-3D, évolution simulée des effectifs, quiz et ressources pédagogiques téléchargeables.
 
-![Aperçu de la bataille interactive](./assets/DemoLaminak_bataille-marignan.png)
+![Aperçu de la bataille interactive](./site/assets/DemoLaminak_bataille-marignan.png)
 
 ## Découvrir l’expérience
 
